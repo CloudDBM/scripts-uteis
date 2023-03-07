@@ -34,7 +34,7 @@ GO
 SELECT d1.[name] into #db
 FROM sys.databases d1
 where d1.state_desc = 'ONLINE' and is_read_only = 0
---and d1.name in ('Angellira')
+--and d1.name in ('A')
  
 DECLARE @SQL NVARCHAR(MAX)
 declare @database_name sysname
@@ -93,7 +93,7 @@ GO
 -- Query result... 
 SELECT * FROM #tmp1
 WHERE 1=1
---AND dbName = '[Escola1_Adm_AGES]' 
+--AND dbName = '[E]' 
 AND PercentChange > 1.00
 ORDER BY PercentChange DESC, RowModifications DESC
 GO
